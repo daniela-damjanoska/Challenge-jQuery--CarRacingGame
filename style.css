@@ -1,0 +1,88 @@
+#race {
+    text-align: center;
+    background-color: #242021;
+}
+
+h1,
+h2,
+h3 {
+    color: #a2a2a2;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+button {
+    border: 2px solid !important;
+}
+
+span {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -43%);
+    font-size: 120px;
+    color: #f5f5f5;
+}
+
+#carOne {
+    top: -4%;
+}
+
+#carTwo {
+    top: 8%;
+}
+
+.btn-outline-light:not(:disabled):not(.disabled).active,
+.btn-outline-light:not(:disabled):not(.disabled):active,
+.show > .btn-outline-light.dropdown-toggle {
+    color: #f8f9fa;
+    background-color: #212529;
+    border-color: #f8f9fa;
+}
+
+.btn-outline-light:hover {
+    color: #f8f9fa;
+    background-color: #212529;
+    border-color: #f8f9fa;
+}
+
+.car-start {
+    position: absolute;
+    left: -25px;
+    width: 15%;
+    margin-left: 0;
+}
+
+.flag {
+    position: absolute;
+    top: 4%;
+    width: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.overlay {
+    display: none; /* Hidden by default */
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/*use these below*/
+/*car1 color*/
+/*color: #ffebf7;*/
+
+/*car2 color*/
+/*color: #ba0000;*/
