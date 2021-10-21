@@ -25,7 +25,6 @@
         />
     </head>
     <body id="race">
-        <!-- write your code here -->
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 mt-3 mb-4">
@@ -45,24 +44,59 @@
             </div>
             <div class="row">
                 <div class="col-12 px-0 racingArea">
-                    <div class="overlay"></div>
                     <img
                         src="./images/raceTrack.jpg"
                         alt="raceTrack"
-                        class="d-block w-100 h-25 position-relative racingTrack"
+                        class="d-block w-100 h-100"
                     />
                     <img
                         src="./images/car2.gif"
-                        id="carOne"
-                        alt="carOne"
-                        class="car-start"
-                    />
-                    <img
-                        src="./images/car1.gif"
                         id="carTwo"
                         alt="carTwo"
                         class="car-start"
                     />
+                    <img
+                        src="./images/car1.gif"
+                        id="carOne"
+                        alt="carOne"
+                        class="car-start"
+                    />
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-12 mb-4">
+                            <h2 class="mb-0">Results</h2>
+                        </div>
+                        <div class="col-6">
+                            <!-- <h4 class="carOneColor h5">Car 1</h4> -->
+                            <!-- h4 or thead??? -->
+                            <table class="table table-borderless">
+                                <thead>
+                                    <tr class="carOneColor h5">
+                                        <th>car 1</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="tbodyOne"></tbody>
+                            </table>
+                        </div>
+                        <div class="col-6">
+                            <!-- <h4 class="carOneColor h5">Car 2</h4> -->
+                            <!-- h4 or thead??? -->
+                            <table class="table table-borderless">
+                                <thead>
+                                    <tr class="carTwoColor h5">
+                                        <th>car 2</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="tbodyTwo"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="row storageResults"></div>
                 </div>
             </div>
         </div>

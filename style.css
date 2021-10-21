@@ -5,41 +5,39 @@
 
 h1,
 h2,
-h3 {
+h3,
+td {
     color: #a2a2a2;
-}
-
-h3 {
-    font-size: 25px;
-}
-
-h2 {
-    font-size: 35px;
 }
 
 h1 {
     font-size: 50px;
 }
 
-button {
+h2 {
+    font-size: 35px;
+}
+
+h3 {
+    font-size: 25px;
+    padding-bottom: 84px;
+}
+
+button,
+td {
     border: 2px solid !important;
 }
 
-span {
-    position: absolute;
-    top: 43%;
-    left: 50%;
-    transform: translate(-50%, -43%);
-    font-size: 120px;
-    color: #f5f5f5;
+td {
+    border-color: #f5f5f5 !important;
 }
 
 #carOne {
-    top: -4%;
+    top: 35%;
 }
 
 #carTwo {
-    top: 8%;
+    top: -13%;
 }
 
 .btn-outline-light:not(:disabled):not(.disabled).active,
@@ -56,33 +54,47 @@ span {
     border-color: #f8f9fa;
 }
 
+.racingArea,
+.overlay {
+    height: 250px;
+}
+
 .car-start {
     position: absolute;
-    left: -25px;
-    width: 15%;
-    margin-left: 0;
+    left: -25px; /*to start from the beginning of the racing track, the img is bigger*/
+    width: 200px;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.counter {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -43%);
+    font-size: 120px;
+    color: #f5f5f5;
 }
 
 .flag {
     position: absolute;
-    top: 4%;
-    width: 15%;
+    top: 35px;
+    width: 250px;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 2;
 }
 
-.overlay {
-    display: none; /* Hidden by default */
-    position: absolute;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+.carOneColor {
+    color: #ffebf7;
 }
 
-/*use these below*/
-/*car1 color*/
-/*color: #ffebf7;*/
-
-/*car2 color*/
-/*color: #ba0000;*/
+.carTwoColor {
+    color: #ba0000;
+}
