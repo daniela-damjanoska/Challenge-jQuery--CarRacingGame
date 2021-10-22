@@ -20,12 +20,17 @@ h2 {
 
 h3 {
     font-size: 25px;
-    padding-bottom: 84px;
+    padding-bottom: 83px;
 }
 
 button,
 td {
     border: 2px solid !important;
+}
+
+button {
+    padding-right: 40px !important;
+    padding-left: 40px !important;
 }
 
 td {
@@ -61,7 +66,7 @@ td {
 
 .car-start {
     position: absolute;
-    left: -25px; /*to start from the beginning of the racing track, the img is bigger*/
+    left: -15px; /*to start from the beginning of the racing track, the img is bigger*/
     width: 200px;
 }
 
@@ -77,7 +82,7 @@ td {
     position: absolute;
     top: 43%;
     left: 50%;
-    transform: translate(-50%, -43%);
+    transform: translate(-65%, -43%);
     font-size: 120px;
     color: #f5f5f5;
 }
@@ -97,4 +102,57 @@ td {
 
 .carTwoColor {
     color: #ba0000;
+}
+
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 27px;
+    }
+
+    h3 {
+        font-size: 20px;
+        padding-bottom: 55px;
+    }
+
+    button {
+        padding: 5px 10px !important;
+    }
+
+    #carOne {
+        top: 38%;
+    }
+
+    #carTwo {
+        top: -10%;
+    }
+
+    .racingArea,
+    .overlay {
+        height: 160px;
+    }
+
+    .car-start {
+        width: 120px;
+    }
+
+    .counter {
+        top: 37%;
+        left: 48%;
+        transform: translate(-48%, -37%);
+        font-size: 70px;
+    }
+
+    .flag {
+        width: 130px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1294px) {
+    h3 {
+        padding-bottom: 53px;
+    }
 }

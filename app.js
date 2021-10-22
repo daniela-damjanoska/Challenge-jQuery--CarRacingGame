@@ -3,7 +3,7 @@ $(function () {
         btnRestart = $('.startOver'),
         carOne = $('#carOne'),
         carTwo = $('#carTwo'),
-        screenWidth = $(window).width() - carOne.width() + 25, //-25px on start position
+        screenWidth = $(window).width() - carOne.width() + 15, //-15px on start position
         carOneLS = localStorage.getItem('carOne'),
         carTwoLS = localStorage.getItem('carTwo'),
         carOneTimeLS = localStorage.getItem('carOneTime'),
@@ -12,10 +12,10 @@ $(function () {
     let isRacingDone = false,
         place = 'first';
 
-    const populateResultTable = (body, carTime) => {
+    const populateResultTable = (body, carTime, color) => {
         $(body).prepend(
             `<tr>
-                <td>Finished in: <span class='carTwoColor font-weight-bold'>${place}</span> place with a time of <span class='carTwoColor font-weight-bold'>${carTime}</span> milliseconds!</td>
+                <td>Finished in: <span class='${color} font-weight-bold'>${place}</span> place with a time of <span class='${color} font-weight-bold'>${carTime}</span> milliseconds!</td>
             </tr>`
         );
     };
@@ -85,7 +85,11 @@ $(function () {
                     carOneTime,
                     function () {
                         raceIsDone();
-                        populateResultTable('.tbodyOne', carOneTime);
+                        populateResultTable(
+                            '.tbodyOne',
+                            carOneTime,
+                            'carOneColor'
+                        );
                         localStorage.setItem('carOne', place);
                     }
                 );
@@ -95,7 +99,11 @@ $(function () {
                     carTwoTime,
                     function () {
                         raceIsDone();
-                        populateResultTable('.tbodyTwo', carTwoTime);
+                        populateResultTable(
+                            '.tbodyTwo',
+                            carTwoTime,
+                            'carTwoColor'
+                        );
                         localStorage.setItem('carTwo', place);
                     }
                 );
@@ -106,8 +114,8 @@ $(function () {
     });
 
     btnRestart.on('click', function () {
-        carOne.css('left', '-25px');
-        carTwo.css('left', '-25px');
+        carOne.css('left', '-15px');
+        carTwo.css('left', '-15px');
         $('.flag').fadeOut();
         btnRace.removeAttr('disabled');
         $(this).attr('disabled', true);
